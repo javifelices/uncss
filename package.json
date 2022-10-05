@@ -9,7 +9,9 @@
     "test": "tests"
   },
   "scripts": {
-    "test": "grunt test"
+    "test": "grunt test",
+    "prepublish": "npm run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
   "main": "lib/uncss.js",
   "bin": {
@@ -39,13 +41,14 @@
   "dependencies": {
     "async": "~0.9.0",
     "commander": "~2.3.0",
-    "css": "~2.1.0",
-    "glob": "^4.0.6",
+    "css": "~2.2.2",
+    "glob": "^5.0.15",
     "is-html": "^1.0.0",
     "node-phantom-simple": "~1.2.0",
-    "phantomjs": "~1.9.10",
-    "request": "~2.44.0",
-    "underscore": "~1.7.0"
+    "phantomjs": "~2.1.1",
+    "request": "~2.87.0",
+    "underscore": "~1.12.1",
+    "@snyk/protect": "latest"
   },
   "devDependencies": {
     "chai": "~1.9.1",
@@ -65,5 +68,6 @@
         "lib/lib.js"
       ]
     }
-  }
+  },
+  "snyk": true
 }
